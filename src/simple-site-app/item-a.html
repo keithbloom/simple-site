@@ -1,0 +1,21 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./button-styles.html">
+<dom-module id="item-a">
+    <template>
+        <style include="button-style">
+     
+        </style>
+         <paper-button>DO IT</paper-button>
+    </template>
+    <script>
+    class ItemA extends Polymer.Element {
+      static get is() { return 'item-a'; }
+      // All of these are optional. Only keep the ones you need.
+      static get properties() { return {} }
+
+    }
+
+    // Associate the new class with an element name
+    customElements.define(ItemA.is, ItemA);
+  </script>
+</dom-module>

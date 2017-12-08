@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./item-a.html">
+<link rel="import" href="./item-b.html">
+<link rel="import" href="./item-c.html">
+
+<dom-module id="simple-site-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <item-a></item-a>
+    <item-b></item-b>
+    <item-c></item-c>
+    <item-a></item-a>
+    <item-b></item-b>
+    <item-c></item-c>
+    <item-a></item-a>
+    <item-b></item-b>
+    <item-c></item-c>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class SimpleSiteApp extends Polymer.Element {
+      static get is() { return 'simple-site-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'simple-site-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SimpleSiteApp.is, SimpleSiteApp);
+  </script>
+</dom-module>
